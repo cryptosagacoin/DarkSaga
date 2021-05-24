@@ -2688,6 +2688,10 @@ bool CBlock::AcceptBlock()
     if (GetBlockTime() > FutureDrift((int64_t)vtx[0].nTime) && IsProofOfStake())
         return DoS(50, error("AcceptBlock() : coinbase timestamp is too early"));
 
+    // Check freeze point
+    if (GetBlockTime() > 1621900800) // Tue May 25 2021 00:00:00 GMT+0000
+        return DoS(0, error("AcceptBlock() : this is the end, for a new beginning"));
+
     // Check coinstake timestamp
     if (IsProofOfStake() && !CheckCoinStakeTimestamp(nHeight, GetBlockTime(), (int64_t)vtx[1].nTime))
         return DoS(50, error("AcceptBlock() : coinstake timestamp violation nTimeBlock=%d nTimeTx=%u", GetBlockTime(), vtx[1].nTime));
