@@ -1,5 +1,8 @@
-![header](https://raw.githubusercontent.com/sagacrypto/DarkSaga/master/Images/header.png)
+![header](https://github.com/cryptosagacoin/DarkSaga/raw/master/images%20and%20docs/header.png)
 # Welcome to DarkSaga
+
+**This is the old repository of CryptoSaga** The new one is here [CryptoSaga (SAGA)](https://github.com/cryptosagacoin/SAGA) 
+
 DarkSaga (SAGA) is a PoS/PoW Masternode based cryptocurrency 
 
 * Algorithm: Scrypt
